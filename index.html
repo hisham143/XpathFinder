@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XPathFinder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">XPathFinder</p>
+        <h1>Find precise XPaths from any page or HTML</h1>
+        <p class="lede">
+          Paste a URL or HTML, then get a copy-ready XPath for every element. Fast, accurate,
+          and built to help testers and automation engineers move quickly.
+        </p>
+      </div>
+      <div class="hero-card">
+        <div class="metric">
+          <span class="label">Elements Found</span>
+          <span id="elementCount" class="value">0</span>
+        </div>
+        <div class="metric">
+          <span class="label">Mode</span>
+          <span id="modeValue" class="value">Idle</span>
+        </div>
+        <div class="metric">
+          <span class="label">Status</span>
+          <span id="statusValue" class="value">Waiting</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="panel">
+        <h2>Input</h2>
+        <div class="field">
+          <label for="htmlInput">HTML</label>
+          <textarea id="htmlInput" rows="10" placeholder="Paste full HTML here..."></textarea>
+          <div class="inline">
+            <button id="analyzeBtn" class="accent">Analyze HTML</button>
+            <button id="clearBtn" class="ghost">Clear</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Results</h2>
+        <div class="toolbar">
+          <input id="filterInput" type="search" placeholder="Filter by tag, text, or xpath..." />
+          <label class="toggle">
+            <span>XPath mode</span>
+            <select id="xpathMode">
+              <option value="stable" selected>Stable</option>
+              <option value="absolute">Absolute</option>
+            </select>
+          </label>
+          <label class="toggle">
+            <input id="proxyFallbackToggle" type="checkbox" checked />
+            <span>Allow proxy fallback</span>
+          </label>
+          <label class="toggle">
+            <input id="textOnlyToggle" type="checkbox" />
+            <span>Only elements with text</span>
+          </label>
+        </div>
+        <div id="results" class="results">
+          <div class="empty">No results yet. Provide a URL or HTML and click Analyze.</div>
+        </div>
+      </section>
+
+      <footer class="panel footer">
+        <p>Copyright By hnk</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
