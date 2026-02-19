@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guides | XPathFinder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <nav class="top-nav">
+      <div class="brand">XPathFinder</div>
+      <div class="nav-links">
+        <a href="index.html">Tool</a>
+        <a href="guides.html">Guides</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Guides</p>
+        <h1>XPath Practices for Reliable Automation</h1>
+        <p class="lede">Short, practical tips to build stable selectors that survive UI changes.</p>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="panel">
+        <h2>1. Prefer IDs and stable attributes</h2>
+        <p>Use unique IDs when available. If not, prefer stable attributes like <strong>data-testid</strong> or <strong>aria-label</strong>.</p>
+      </section>
+
+      <section class="panel">
+        <h2>2. Avoid deep absolute paths</h2>
+        <p>Absolute paths like <code>/html/body/div[2]/...</code> break easily. Use shorter, attribute-based selectors instead.</p>
+      </section>
+
+      <section class="panel">
+        <h2>3. Use text selectors carefully</h2>
+        <p>Text-based XPaths are useful for labels and buttons. Keep them short and normalized to avoid spacing issues.</p>
+      </section>
+
+      <section class="panel">
+        <h2>4. Verify uniqueness</h2>
+        <p>Always validate that your XPath matches exactly one element to avoid flaky tests.</p>
+      </section>
+    </main>
+
+    <footer class="panel footer">
+      <p>Copyright By hnk</p>
+    </footer>
+  </div>
+</body>
+</html>

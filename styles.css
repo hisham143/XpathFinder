@@ -24,6 +24,40 @@ body {
   background: radial-gradient(circle at top left, #fdf7ef 0%, #f6e8d8 50%, #e8d2bd 100%);
 }
 
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 18px;
+  background: #fffaf4;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin-bottom: 22px;
+}
+
+.brand {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.nav-links a {
+  color: var(--cobalt);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
 .page {
   max-width: 1200px;
   margin: 0 auto;
@@ -252,6 +286,51 @@ button.ghost {
 }
 
 .notes {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.price-card {
+  border-radius: 18px;
+  padding: 18px;
+  background: #fff6ea;
+  border: 1px solid rgba(31, 29, 26, 0.08);
+  display: grid;
+  gap: 10px;
+}
+
+.price-card.subtle {
+  background: #fffaf4;
+}
+
+.plan-name {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.plan-price {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.plan-price span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.plan-features {
   margin: 0;
   padding-left: 18px;
   color: var(--muted);
